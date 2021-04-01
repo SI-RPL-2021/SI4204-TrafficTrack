@@ -15,7 +15,7 @@
     <div class="container mt-5 p-3 bg-white border">
         <form method="post" action="{{url("/do-register")}}">
             @csrf
-            <h1 class="text-center">Register </h1>
+            <h1 class="text-center">Register</h1>
             <p class="text-center">Pengguna</p>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
