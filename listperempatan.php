@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td>1</td>
-            <td>Perempatan Buah Batu </td>
+            <td>Perempatan Buah Batu</td>
         </tr>
     </table>
 
