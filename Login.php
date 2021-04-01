@@ -3,7 +3,7 @@ $nama= "luthfi";
 ?>
 <html>
 <body>
-Praktikum RPL Pusing <br>
+Praktikum RPL <br>
 SI4204
 </body>
 </html>
