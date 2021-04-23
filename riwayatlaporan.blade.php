@@ -9,7 +9,7 @@
     @include("layout.nav")
     
     <div class="container mt-4">
-        <h2>Riwayat Laporan</h2>
+        <h2>Riwayat  Laporan</h2>
         <table class="table">
             <thead>
                 <tr>
