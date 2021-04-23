@@ -28,7 +28,7 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="a" class="form-label">Maks Kecepatan (km/h)</label>
+                <label for="a" class="form-label">Maksimal Kecepatan (km/h)</label>
                 <input name="kecepatanmaks" type="number" class="form-control" id="a">
             </div>
             <button type="submit" class="btn btn-primary">Tambah</button>
