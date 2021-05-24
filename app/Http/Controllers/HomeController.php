@@ -22,6 +22,7 @@ class HomeController extends Controller
                     "pengguna"=>$pengguna[0],
                     "cuaca"=>$cuaca->json()
                     ]);
+                //Tampilan home pengguna bisa melihat langsung prakiraan cuaca
             }
             if (session("role") == "polantas")
             {
