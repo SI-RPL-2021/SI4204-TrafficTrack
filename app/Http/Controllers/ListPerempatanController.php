@@ -28,6 +28,7 @@ class ListPerempatanController extends Controller
                     "polantas"=>$polantas[0] ?? null,
                     "perempatan"=>$perempatan
                     ]);
+                //disini polantas bisa melihat daftar list perempatan yang ada
             }
             if (session("role") == "admin")
             {
