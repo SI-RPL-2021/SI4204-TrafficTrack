@@ -18,6 +18,8 @@ class CreatePenggunaTable extends Migration
             $table->string("nama");
             $table->string("email");
             $table->string("password");
+            $table->string("ktp")->nullable();
+            $table->string("terverifikasi")->default("belum");
             $table->timestamps();
         });
     }

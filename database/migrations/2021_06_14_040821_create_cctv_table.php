@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePolantasTable extends Migration
+class CreateCctvTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreatePolantasTable extends Migration
      */
     public function up()
     {
-        Schema::create('polantas', function (Blueprint $table) {
+        Schema::create('cctv', function (Blueprint $table) {
             $table->id();
-            $table->string("id_lantas");
-            $table->string("password");
+            $table->string("nama");
+            $table->string("link");
+            $table->integer("public")->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreatePolantasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('polantas');
+        Schema::dropIfExists('cctv');
     }
 }

@@ -13,15 +13,22 @@
            {{session("success")}}
           </div>
         @endif
-        <form method="post" action="{{route("tambahpolantas")}}">
+        <form method="post" action="{{route("tambahcctv")}}">
             @csrf
             <div class="mb-3">
-                <label for="a" class="form-label">ID Lantas</label>
-                <input name="id_lantas" type="text" class="form-control" id="a">
+                <label for="a" class="form-label">Nama</label>
+                <input name="nama" type="text" class="form-control" id="a">
             </div>
             <div class="mb-3">
-                <label for="a" class="form-label">Password</label>
-                <input name="password" type="password" class="form-control" id="a">
+                <label for="a" class="form-label">Akses</label>
+                <select required name="public" class="form-select" aria-label="Default select example">
+                    <option value="1"selected>Publik</option>
+                    <option value="0">Pribadi</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="a" class="form-label">Link</label>
+                <input name="link" type="text" class="form-control" id="a">
             </div>
             <button type="submit" class="btn btn-primary">Tambah</button>
         </form>

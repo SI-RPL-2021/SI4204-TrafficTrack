@@ -22,15 +22,15 @@
 
             <div class="mb-3">
                 <label for="a" class="form-label">Jenis Laporan</label>
-                <select required name="jenis" class="form-select" aria-label="Default select example">
+                <select id="jenis" required name="jenis" class="form-select" aria-label="Default select example">
                     <option value="kecelakaan" selected>Kecelakaan</option>
                     <option value="banjir">Banjir</option>
                     <option value="kebakaran">Kebakaran</option>
                 </select>
             </div>
 
-            <div class="mb-3">
-                <label for="a" class="form-label">Berat Kecelakaan</label>
+            <div class="mb-3" id="beratt">
+                <label for="a" class="form-label" id="beratk">Berat</label>
                 <select required name="berat" class="form-select" aria-label="Default select example">
                     <option value="kecil"selected>Kecil</option>
                     <option value="besar">Besar</option>
@@ -40,6 +40,11 @@
             <div class="mb-3">
                 <label for="formFile" class="form-label">Foto</label>
                 <input required name="foto" class="form-control" type="file" id="formFile">
+            </div>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Alamat</label>
+                <input required name="alamat" class="form-control" type="text" id="formFile">
             </div>
             
             <div class="mb-3">
@@ -53,5 +58,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
-
+<script>
+    let lol = `<label for="a" class="form-label" id="beratk">Berat</label>
+                <select required name="berat" class="form-select" aria-label="Default select example">
+                    <option value="kecil"selected>Kecil</option>
+                    <option value="besar">Besar</option>
+                </select>`
+    let lol2 = `<input type="hidden" name="berat" value="">`
+    $("#jenis").change(function(){
+        if ($(this).val() == "banjir") {
+            $("#beratt").html(lol2);
+        }else{
+            $("#beratt").html(lol);
+        }
+    })
+    </script>
 </html>

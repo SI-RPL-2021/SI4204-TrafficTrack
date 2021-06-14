@@ -15,6 +15,18 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route("kelolapolantas")}}">Kelola Polantas</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route("verifikasiuser")}}">Verifikasi User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route("kelolacctv")}}">Kelola CCTV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route("lihatfeedback")}}">Lihat Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route("laporankecelakaan")}}">Laporan Kecelakaan</a>
+                </li>
             </ul>
         </div>
         <form class="d-flex"><div class="dropdown">

@@ -13,21 +13,25 @@
 
 <body class="bg-light">
     <div class="container mt-5 p-3 bg-white border">
-        <form method="post" action="{{url("/do-register")}}">
+        <form method="post" action="{{url("/do-register")}}" enctype="multipart/form-data">
             @csrf
             <h1 class="text-center">Register</h1>
             <p class="text-center">Pengguna</p>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input required name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                <input required name="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <p>KTP</p>
+            <div class="mb-3">
+                <input name="ktp" type="file" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
             <a href="{{url("login")}}" class="btn btn-primary">Login</a>

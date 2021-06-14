@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cctv;
 use App\Models\ListPerempatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,19 +17,22 @@ class ListPerempatanController extends Controller
             if (session("role") == "pengguna")
             {
                 $pengguna = DB::select("SELECT * FROM pengguna WHERE id=?",[session("log")]);
+                $cctv = Cctv::where("public","1")->get();
                 return view("listperempatan",[
                     "pengguna"=>$pengguna[0] ?? null,
-                    "perempatan"=>$perempatan
+                    "perempatan"=>$perempatan,
+                    "cctv"=>$cctv
                     ]);
             }
             if (session("role") == "polantas")
             {
                 $polantas = DB::select("SELECT * FROM polantas WHERE id=?",[session("log")]);
+                $cctv = Cctv::where("public","1")->get();
                 return view("listperempatan-polantas",[
                     "polantas"=>$polantas[0] ?? null,
-                    "perempatan"=>$perempatan
+                    "perempatan"=>$perempatan,
+                    "cctv"=>$cctv
                     ]);
-                //disini polantas bisa melihat daftar list perempatan yang ada
             }
             if (session("role") == "admin")
             {

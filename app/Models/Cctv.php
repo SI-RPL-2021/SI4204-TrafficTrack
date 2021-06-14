@@ -5,9 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pengguna extends Model
+class Cctv extends Model
 {
     use HasFactory;
-    protected $table = "pengguna";
-    protected $fillable = ["nama","email","password","terverifikasi"];
+    protected $table = "cctv";
+    protected $fillable = [
+        "nama",
+        "public",
+        "link"
+    ];
 }

@@ -6,7 +6,7 @@ use App\Models\Pengguna;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
-//
+
 class HomeController extends Controller
 {
     public function index()
@@ -22,7 +22,6 @@ class HomeController extends Controller
                     "pengguna"=>$pengguna[0],
                     "cuaca"=>$cuaca->json()
                     ]);
-                //Tampilan home pengguna bisa melihat langsung prakiraan cuaca
             }
             if (session("role") == "polantas")
             {

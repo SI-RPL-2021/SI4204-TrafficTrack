@@ -17,8 +17,10 @@ class CreateLaporanTable extends Migration
             $table->id();
             $table->integer("id_pengguna");
             $table->string("jenis");
-            $table->string("berat");
+            $table->string("berat")->nullable();
+            $table->string("alamat")->nullable();
             $table->string("foto");
+            $table->integer("diterima")->default(0);
             $table->text("komentar");
             $table->timestamps();
         });

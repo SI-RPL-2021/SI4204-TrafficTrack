@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-//
+
 use App\Models\Polantas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-//
+
 class PolantasController extends Controller
 {
     public function kelolaPolantas()

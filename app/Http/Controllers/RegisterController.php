@@ -15,7 +15,20 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        Pengguna::create($request->all());
+        
+        $res = DB::select("SELECT * FROM pengguna WHERE email = ? AND password = ?",[$request->post("email"),$request->post("password")]);
+        if (count($res) > 0)
+        {
+            return back();
+        }
+
+        $randname = rand(0,99999).'_'.$request->file("ktp")->getClientOriginalName();
+        $request->file("ktp")->storeAs("public/ktp",$randname);
+
+        $p = new Pengguna($request->all());
+        $p->ktp = $randname;
+        $p->save();
+        
         $res = DB::select("SELECT * FROM pengguna WHERE email = ? AND password = ?",[$request->post("email"),$request->post("password")]);
         session([
             "log"=>$res[0]->id,

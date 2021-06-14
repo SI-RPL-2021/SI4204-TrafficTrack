@@ -7,8 +7,14 @@
 
 <body>
     @include("layout.nav")
-    
     <div class="container mt-5">
+    
+        @if (session("berhasil"))
+        <div class="alert alert-success mt-3" role="alert">
+            Berhasil mengirim feedback
+        </div>
+        @endif
+    
         <h2 class="mb-3">Kirim Feedback</h2>
         <form method="post" action="{{route("kirimfeedback")}}">
             @csrf
